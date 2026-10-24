@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 09:28:37 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/16 19:57:58 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/20 11:26:38 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,10 @@ int	ft_atoi(const char *nptr)
 	int	i;
 	int	sign;
 	int	number;
-	int	overflow_flag;
 
 	sign = 1;
 	i = 0;
 	number = 0;
-	overflow_flag = 0;
 	while (ft_iswhitespace(nptr[i]) && nptr[i])
 		i++;
 	if ((nptr[i] == '-') || (nptr[i] == '+' && nptr[i]))
