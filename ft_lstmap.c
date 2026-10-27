@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 15:23:16 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/27 15:49:01 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/27 18:37:03 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	list = lst;
 	new_list = ft_lstnew(f(list->content));
-	if(!new_list)
-		return NULL;
+	if (!new_list)
+		return (NULL);
 	list = list->next;
 	while (list)
 	{
@@ -36,5 +36,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
-
-// 0x100 0X200 NULL NULL
