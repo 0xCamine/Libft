@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 13:10:10 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/17 12:45:33 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/27 12:15:14 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
-	if (!(s[0]))
-		return (0);
 	i = 0;
 	while (s[i])
 		i++;
