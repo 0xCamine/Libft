@@ -1,22 +1,22 @@
 SRC = $(wildcard ft_*.c)
 OBJ = $(SRC:.c=.o)
 CC = cc
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
-all : $(NAME)
+all :  $(NAME)
 
-%.o : $(SRC)
-	cc $(FLAGS) -c $(SRC) -O $(OBJ)
-
-$(NAME) : 
+$(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
+%.o : %.c
+	$(CC) $(FLAGS) -c  $<  -o $@
+
 clean : 
-	rm $(OBJ) -rf
+	rm  -f $(OBJ)  
 
 fclean : clean
-	 rm $(NAME) -rf
+	 rm -f $(NAME)  
 
 re :  fclean   all
 
