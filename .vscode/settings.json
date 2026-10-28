@@ -48,8 +48,7 @@
                 "libft.h",
                 "makefile",
                 ".vscode",
-                "test.c",
-                "draw.tldr"
+                "test.c"
             ]
         }
     }
