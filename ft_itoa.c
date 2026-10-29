@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 12:02:03 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/18 17:56:21 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/29 16:17:24 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 int	ft_lenint(int c)
 {
-	int	i;
+	int		i;
+	long	nb;
 
+	nb = c;
 	i = 1;
-	if (c < 0)
+	if (nb < 0)
 	{
-		c = c * (-1);
+		nb = -nb;
 		i++;
 	}
-	while (c >= 10)
+	while (nb >= 10)
 	{
-		c = c / 10;
+		nb = nb / 10;
 		i++;
 	}
 	return (i);

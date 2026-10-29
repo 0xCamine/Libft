@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 14:32:48 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/16 19:47:52 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/29 13:48:26 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,19 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*address;
 	size_t			i;
-	size_t			j;
+	size_t			alloc_size;
 
-	address = malloc(nmemb * size);
+	if (size && nmemb > SIZE_MAX / size)
+		return (NULL);
+	alloc_size = nmemb * size;
+	address = malloc(alloc_size);
 	if (address == NULL)
 		return (NULL);
 	i = 0;
-	while (i < nmemb)
+	while (i < alloc_size)
 	{
-		j = 0;
-		while (j < size)
-		{
-			address[i + j] = 0;
-			j++;
-		}
-		i = i + size;
+		address[i] = 0;
+		i++;
 	}
-	return (((void *)address));
+	return ((void *)address);
 }

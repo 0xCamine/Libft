@@ -10,7 +10,7 @@ $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 %.o : %.c
-	$(CC) $(FLAGS) -c  $<  -o $@
+	$(CC) $(FLAGS) -c   -I . $<  -o $@
 
 clean : 
 	rm  -f $(OBJ)  
@@ -21,7 +21,8 @@ fclean : clean
 re :  fclean   all
 
 
-#.PHONY: all clean fclean re
+.PHONY: fclean  
+
 # touch all fclean clean re
 # rm all fclean clean re
 # ar rcs libft.a object_files

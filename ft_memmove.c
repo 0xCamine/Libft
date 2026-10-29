@@ -6,53 +6,41 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:44:09 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/27 12:15:51 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/29 10:48:58 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isoverlap(void *dest, const void *src, size_t nbytes)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (i < nbytes)
-	{
-		j = 0;
-		while (j < nbytes)
-			if (((char *)dest)[i] == ((char *)src)[j++])
-				return (1);
-		i++;
-	}
-	return (0);
-}
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (ft_isoverlap(dest, src, n))
+	if ((unsigned char *)dest > (unsigned char *)src)
 	{
-		if (dest < src)
+		i = n;
+		while (i-- > 0)
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+	}
+	else
+	{
+		while (i < n)
 		{
-			while (i < n)
-			{
-				((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-				i++;
-			}
-			return (dest);
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
 		}
 	}
-	i = n - 1;
-	while (i > 0)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i--;
-	}
-	((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 	return (dest);
 }
+
+// 07 5B CD 15
+
+// 0x100 15
+// 0x101 CD
+// 0x102 5B
+// 0x103 07
+
+// 0x101 CD
+// 0x102 5B
+// 0x103 07

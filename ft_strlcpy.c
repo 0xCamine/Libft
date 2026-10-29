@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 16:25:17 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/16 20:33:17 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/29 12:18:25 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = 0;
 	while (src[slen])
 		slen++;
-	while (src[i] && i < size)
+	if (size == 0)
+		return (slen);
+	while (src[i] && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;

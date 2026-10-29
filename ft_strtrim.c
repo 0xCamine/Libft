@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:43:28 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/17 12:44:09 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/29 16:26:52 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,28 @@ int	ft_isexist(char const c, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
-	size_t	index;
-	size_t	len;
+	size_t	end;
+	size_t	size;
 	char	*ptr;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
-	index = 0;
-	len = ft_strlen(s1);
-	ptr = ft_calloc(len, sizeof(char));
+	end = ft_strlen(s1);
+	while (i < end && ft_isexist(s1[i], set))
+		i++;
+	while (end > i && ft_isexist(s1[end - 1], set))
+		end--;
+	size = end - i;
+	ptr = ft_calloc(size + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
-	while (ft_isexist(s1[i], set))
-		i++;
-	if (i == len)
-		return (ptr);
-	len = len - 1;
-	while (ft_isexist(s1[len], set))
-		len--;
-	while (i <= len)
+	size = 0;
+	while (i < end)
 	{
-		ptr[index] = s1[i];
-		index++;
+		ptr[size] = s1[i];
 		i++;
+		size++;
 	}
 	return (ptr);
 }
