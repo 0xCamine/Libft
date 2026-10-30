@@ -6,14 +6,13 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 09:28:37 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/29 17:09:56 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/10/30 09:59:50 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
