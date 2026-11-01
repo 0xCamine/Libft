@@ -6,24 +6,11 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:02:56 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/19 16:12:02 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/01 16:50:36 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_intlen(int n)
-{
-	int	l;
-
-	l = 1;
-	while (n >= 10)
-	{
-		n = n / 10;
-		l++;
-	}
-	return (l);
-}
 
 // 123 / 10
 
@@ -31,22 +18,9 @@ int	ft_intlen(int n)
 // 12
 // 1
 
-int	ft_divbyindex(int n, int i)
-{
-	int	div;
-
-	div = 0;
-	while (div < i)
-	{
-		n = n / 10;
-		div++;
-	}
-	return (n);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	int	nb;
+	char	nb;
 
 	nb = 0;
 	if (n == -2147483648)

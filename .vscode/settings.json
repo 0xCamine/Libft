@@ -46,11 +46,9 @@
                 "ft_lstiter.c",
                 "ft_lstmap.c",
                 "libft.h",
-                "clean",
-                "fclean",
-                "main.c",
                 "Makefile",
                 "README.md",
+                "libft.a",
                 ".vscode"
             ]
         }

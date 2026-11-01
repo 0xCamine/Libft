@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 21:17:59 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/27 18:57:20 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/01 16:42:19 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	i = 0;
 	if (!n)
-		return (NULL);
+		return (s);
 	while (i < n)
 	{
 		((unsigned char *)s)[i] = *((unsigned char *)&c);

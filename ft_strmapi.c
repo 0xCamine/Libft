@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 15:13:36 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/18 17:19:01 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/01 14:56:39 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	ptr = ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
