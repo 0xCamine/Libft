@@ -7,10 +7,10 @@ NAME = libft.a
 all :  $(NAME)
 
 $(NAME) : $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar r $(NAME) $(OBJ)
 
-%.o : %.c
-	$(CC) $(FLAGS) -c   -I . $<  -o $@
+%.o : %.c libft.h
+	$(CC) $(FLAGS) -c  $<  -o $@
 
 clean : 
 	rm  -f $(OBJ)  
@@ -21,12 +21,4 @@ fclean : clean
 re :  fclean   all
 
 
-.PHONY: fclean  
-
-# touch all fclean clean re
-# rm all fclean clean re
-# ar rcs libft.a object_files
-# all clean fclean re
-# clean remove cache 
-# re rebuild the project 
-# fclean delete cache and liberary
+.PHONY: clean  

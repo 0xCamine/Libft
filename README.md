@@ -40,7 +40,7 @@ Include `libft.h` in your C source file:
 Compile your program with the library:
 
 ```bash
-cc main.c -L. -lft -I. -o program
+cc main.c libft.a -o program
 ```
 
 Run the program:
