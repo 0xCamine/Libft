@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:01:32 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 16:51:05 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/01 17:22:31 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
-	
+
 	i = 0;
 	while (s[i])
 		write(fd, &s[i++], 1);
