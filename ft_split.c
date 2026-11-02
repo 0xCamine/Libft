@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 12:47:06 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 16:34:19 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/01 19:00:55 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,18 @@ size_t	ft_count(const char *str, char c)
 {
 	size_t	i;
 	size_t	words;
-	int		is_word;
 
-	words = 0;
 	i = 0;
-	is_word = 0;
+	words = 0;
 	while (str[i])
 	{
 		while (str[i] == c)
 			i++;
-		while (str[i] != c && str[i])
-		{
-			is_word = 1;
-			i++;
-		}
-		if (is_word)
+		if (str[i] && str[i] != c)
 		{
 			words++;
-			is_word = 0;
+			while (str[i] && str[i] != c)
+				i++;
 		}
 	}
 	return (words);
@@ -42,41 +36,65 @@ size_t	ft_count(const char *str, char c)
 size_t	ft_wordscount(const char *str, char c)
 {
 	size_t	words;
+
+	words = 0;
+	while (str[words] && str[words] != c)
+		words++;
+	return (words);
+}
+
+void	ft_freeptr(char **a, size_t index)
+{
 	size_t	i;
 
 	i = 0;
-	words = 0;
-	while (str[i] && str[i] != c)
+	while (i < index)
 	{
-		words++;
+		free(a[i]);
 		i++;
 	}
-	return (words);
+	free(a);
+}
+
+int	ft_norm(char const *s, char **ptr, char c, size_t words)
+{
+	size_t	i;
+	size_t	j;
+	size_t	r;
+
+	i = 0;
+	j = 0;
+	while (i < words)
+	{
+		while (s[j] && s[j] == c)
+			j++;
+		r = ft_wordscount(s + j, c);
+		ptr[i] = ft_calloc(r + 1, sizeof(char));
+		if (!ptr[i])
+		{
+			ft_freeptr(ptr, i);
+			return (0);
+		}
+		r = 0;
+		while (s[j] && s[j] != c)
+			ptr[i][r++] = s[j++];
+		i++;
+	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	j;
-	size_t	i;
-	char	**ptr;
 	size_t	words;
-	size_t	r;
+	char	**ptr;
 
+	if (!s)
+		return (NULL);
 	words = ft_count(s, c);
 	ptr = ft_calloc(words + 1, sizeof(char *));
-	i = 0;
-	j = 0;
 	if (!ptr)
 		return (NULL);
-	while (i < words)
-	{
-		r = 0;
-		while (s[j] == c && s[j])
-			j++;
-		ptr[i] = ft_calloc(ft_wordscount(s + j, c) + 1, sizeof(char));
-		while (s[j] != c && s[j])
-			ptr[i][r++] = s[j++];
-		i++;
-	}
+	if (!ft_norm(s, ptr, c, words))
+		return (NULL);
 	return (ptr);
 }

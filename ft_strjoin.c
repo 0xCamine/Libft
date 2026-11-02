@@ -6,13 +6,13 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:12:31 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 17:46:52 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/01 18:20:45 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strfill(char const *s1, char const *s2, char *ptr)
+static void	ft_strfill(char const *s1, char const *s2, char *ptr)
 {
 	size_t	i;
 	size_t	len;

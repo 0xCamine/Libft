@@ -137,8 +137,3 @@ The following resources are useful for understanding the concepts and implementi
 AI tools were used as a supplementary learning resource during development. They helped explain C concepts, clarify function behavior, identify potential bugs, and discuss memory management and edge cases.
 
 The implementation, testing, and verification of the functions remain the responsibility of the project author. AI-generated suggestions were reviewed and adapted as needed.
-
-## Author
-
-- **Login:**  abouferr 
-- **School:** 1337
