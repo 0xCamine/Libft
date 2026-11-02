@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 17:57:38 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 17:00:48 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/02 09:23:15 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+// aminebouferra    ine   8  3  =  5
