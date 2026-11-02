@@ -6,11 +6,12 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:44:09 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/02 07:43:08 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/02 11:34:10 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
