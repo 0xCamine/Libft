@@ -6,12 +6,11 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 12:16:50 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/27 10:35:58 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/03 16:42:00 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
