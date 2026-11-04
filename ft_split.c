@@ -6,13 +6,13 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 12:47:06 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 19:00:55 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/04 09:43:32 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count(const char *str, char c)
+static size_t	ft_count(const char *str, char c)
 {
 	size_t	i;
 	size_t	words;
@@ -33,7 +33,7 @@ size_t	ft_count(const char *str, char c)
 	return (words);
 }
 
-size_t	ft_wordscount(const char *str, char c)
+static size_t	ft_wordscount(const char *str, char c)
 {
 	size_t	words;
 
@@ -43,7 +43,7 @@ size_t	ft_wordscount(const char *str, char c)
 	return (words);
 }
 
-void	ft_freeptr(char **a, size_t index)
+static void	ft_freeptr(char **a, size_t index)
 {
 	size_t	i;
 
@@ -56,7 +56,7 @@ void	ft_freeptr(char **a, size_t index)
 	free(a);
 }
 
-int	ft_norm(char const *s, char **ptr, char c, size_t words)
+static int	ft_norm(char const *s, char **ptr, char c, size_t words)
 {
 	size_t	i;
 	size_t	j;

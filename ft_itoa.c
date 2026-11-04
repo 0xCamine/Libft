@@ -6,13 +6,13 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 12:02:03 by abouferr          #+#    #+#             */
-/*   Updated: 2026/10/29 16:17:24 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/04 09:41:54 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lenint(int c)
+static int	ft_lenint(int c)
 {
 	int		i;
 	long	nb;
@@ -32,7 +32,7 @@ int	ft_lenint(int c)
 	return (i);
 }
 
-void	ft_handlers(char *ptr, int n)
+static void	ft_handlers(char *ptr, int n)
 {
 	int		i;
 	char	*int_min;
@@ -51,7 +51,7 @@ void	ft_handlers(char *ptr, int n)
 	}
 }
 
-void	ft_strput(char *ptr, int n, int i)
+static void	ft_strput(char *ptr, int n, int i)
 {
 	while (n > 0 && i >= 0)
 	{

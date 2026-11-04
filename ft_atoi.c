@@ -6,13 +6,13 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 09:28:37 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 17:39:06 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/04 09:42:36 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_iswhitespace(char c)
+static int	ft_iswhitespace(char c)
 {
 	if ((c >= 9 && c <= 13) || (c == 32))
 		return (1);

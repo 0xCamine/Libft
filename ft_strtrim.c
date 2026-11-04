@@ -6,13 +6,13 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:43:28 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 15:26:33 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/04 09:43:10 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isexist(char const c, char const *set)
+static int	ft_isexist(char const c, char const *set)
 {
 	size_t	i;
 
