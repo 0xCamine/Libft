@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 11:19:26 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 10:49:43 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/04 20:09:12 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dlen + i] = '\0';
+	while (src[slen])
+		slen++;
 	return (dlen + slen);
 }

@@ -6,17 +6,11 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:02:56 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/01 16:50:36 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/04 19:30:05 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// 123 / 10
-
-//   123
-// 12
-// 1
 
 void	ft_putnbr_fd(int n, int fd)
 {
