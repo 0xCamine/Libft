@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 12:47:06 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/06 10:41:13 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/06 10:41:46 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	ptr = ft_calloc(words + 1, sizeof(char *));
 	if (!ptr)
 		return (NULL);
-	if (!ft_norm(s, ptr, c, words))
+	if (!ft_fill(s, ptr, c, words))
 		return (NULL);
 	return (ptr);
 }
