@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 12:47:06 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/04 09:43:32 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/06 10:41:13 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	ft_freeptr(char **a, size_t index)
 	free(a);
 }
 
-static int	ft_norm(char const *s, char **ptr, char c, size_t words)
+static int	ft_fill(char const *s, char **ptr, char c, size_t words)
 {
 	size_t	i;
 	size_t	j;
