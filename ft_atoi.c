@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
-	int	number;
+	long	number;
 
 	sign = 1;
 	i = 0;
