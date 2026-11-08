@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 09:28:37 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/08 10:02:51 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/08 10:10:23 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,8 @@ static int	ft_iswhitespace(char c)
 
 int	ft_atoi(const char *nptr)
 {
-<<<<<<< HEAD
 	int		i;
 	int		sign;
-=======
-	int	i;
-	int	sign;
->>>>>>> github/main
 	long	number;
 
 	sign = 1;
