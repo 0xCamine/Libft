@@ -6,7 +6,7 @@
 /*   By: abouferr <abouferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:44:09 by abouferr          #+#    #+#             */
-/*   Updated: 2026/11/06 16:44:59 by abouferr         ###   ########.fr       */
+/*   Updated: 2026/11/08 12:37:16 by abouferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else if ((unsigned char *)dest < (unsigned char *)src)
 	{
-		while (i < n)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			i++;
-		}
+		ft_memcpy(dest, src, n);
 	}
 	return (dest);
 }
