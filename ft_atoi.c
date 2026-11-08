@@ -21,8 +21,13 @@ static int	ft_iswhitespace(char c)
 
 int	ft_atoi(const char *nptr)
 {
+<<<<<<< HEAD
 	int		i;
 	int		sign;
+=======
+	int	i;
+	int	sign;
+>>>>>>> github/main
 	long	number;
 
 	sign = 1;
